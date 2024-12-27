@@ -1,3 +1,5 @@
+import dotenv from 'dotenv';
+
 // ---------- Componentes ----------
 
 import Header from "./components/Header";

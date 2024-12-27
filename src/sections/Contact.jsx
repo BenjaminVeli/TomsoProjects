@@ -24,8 +24,8 @@ const Contact = () => {
 
     try{
       emailjs.send(
-        'service_eycuf28',
-        'template_5jzfaxo',
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
           to_name: 'Tomso',
@@ -33,7 +33,7 @@ const Contact = () => {
           to_email: 'tomso.app@gmail.com',
           message: form.message
         },
-        'oYtrGoHWvu86wEscF'
+        process.env.REACT_APP_EMAILJS_USER_ID
         )
 
         setLoading(false);
